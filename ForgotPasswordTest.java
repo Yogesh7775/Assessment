@@ -10,8 +10,6 @@ import java.time.Duration;
 
 public class ForgotPasswordTest {
     public static void main(String[] args) {
-        // Set up WebDriver (ensure the path to ChromeDriver is correct)
-//        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         WebDriver driver = new ChromeDriver();
 
         try {
@@ -24,9 +22,8 @@ public class ForgotPasswordTest {
                     By.xpath("//a[contains(text(), 'Forgot Password')]")));
             forgotPasswordLink.click();
 
-            // Wait for the forgot password form to appear
-          WebElement emailField =driver.findElement(By.xpath("//*[@id=\"id_17366752202626918\"]"));// Replace with the actual ID or selector for the email field
-            WebElement submitButton = driver.findElement(By.id("submit")); // Replace with the actual ID or selector
+          WebElement emailField =driver.findElement(By.xpath("//*[@id=\"id_17366752202626918\"]"));
+            WebElement submitButton = driver.findElement(By.id("submit")); 
 
             // Test Case 1: Valid email
             emailField.clear();
