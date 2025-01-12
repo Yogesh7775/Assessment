@@ -40,6 +40,7 @@ public class LoginPageValidation {
 	            usernameField.sendKeys("invalid_user@example.com");
 	            passwordField.sendKeys("WrongPassword123");
 	            loginButton.click();
+			
 
 	            WebElement invalidLoginError = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login-error")));
 	            if (invalidLoginError.isDisplayed()) {
